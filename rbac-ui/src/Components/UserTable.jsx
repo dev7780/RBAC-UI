@@ -1,37 +1,45 @@
-// src/components/UserTable.jsx
-import React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button } from '@mui/material';
+import React from "react";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  IconButton,
+  Paper,
+} from "@mui/material";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteIcon from "@mui/icons-material/Delete";
 
-const UserTable = ({ users, onDeleteUser }) => {
+const UserTable = ({ users, onEdit, onDelete }) => {
   return (
     <TableContainer component={Paper}>
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>ID</TableCell>
             <TableCell>Name</TableCell>
+            
             <TableCell>Role</TableCell>
-            <TableCell>Status</TableCell>
             <TableCell>Actions</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {users.map((user) => (
             <TableRow key={user.id}>
-              <TableCell>{user.id}</TableCell>
               <TableCell>{user.name}</TableCell>
+             
               <TableCell>{user.role}</TableCell>
-              <TableCell>{user.status}</TableCell>
               <TableCell>
-                <Button variant="outlined" color="primary">Edit</Button>
-                <Button
-                  variant="outlined"
-                  color="secondary"
-                  style={{ marginLeft: '10px' }}
-                  onClick={() => onDeleteUser(user.id)}
+                <IconButton onClick={() => onEdit(user)}>
+                  <EditIcon />
+                </IconButton>
+                <IconButton
+                  onClick={() => onDelete(user.id)}
+                  color="error"
                 >
-                  Delete
-                </Button>
+                  <DeleteIcon />
+                </IconButton>
               </TableCell>
             </TableRow>
           ))}

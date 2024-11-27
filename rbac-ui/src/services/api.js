@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://mock-api-server.com', // Mock URL for now
+  baseURL: 'https://mock-api-server.com', 
   headers: {
     'Content-Type': 'application/json',
   },

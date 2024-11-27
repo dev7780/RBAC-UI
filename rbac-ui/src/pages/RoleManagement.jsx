@@ -1,4 +1,4 @@
-// src/pages/RoleManagement.jsx
+
 import React, { useState } from 'react';
 import { Container, Typography } from '@mui/material';
 import RoleTable from '../Components/RoleTable';
@@ -7,7 +7,7 @@ import { mockRoles } from '../services/mockData';
 const RoleManagement = () => {
   const [roles, setRoles] = useState(mockRoles);
 
-  // Example function to handle role deletion (mock)
+  
   const handleDeleteRole = (roleId) => {
     setRoles(roles.filter(role => role.id !== roleId));
   };
