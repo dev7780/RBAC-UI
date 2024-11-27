@@ -48,7 +48,7 @@ src/
 ├── Components/
 │   ├── AddUserDialog.jsx        # Dialog for adding a new user
 │   ├── EditUserDialog.jsx       # Dialog for editing an existing user
-│   ├── RoleHierarchyFlow.jsx   # Displays role hierarchy as a flowchart
+│   ├── RoleHierarchyFlow.jsx   # Displays role hierarchy as a flowchart 
 │   └── UserTable.jsx            # Displays user data in a table
 ├── services/
 │   └── mockData.js             # Mock data for users and roles
